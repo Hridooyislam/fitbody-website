@@ -1,0 +1,852 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Wed May 21 2025 17:41:51 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="682e10400bf2f5af0434907d" data-wf-site="682e10400bf2f5af0434900a">
+<head>
+  <meta charset="utf-8">
+  <title>FitBody - Your Fitness Journey</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/fitbody.css" rel="stylesheet" type="text/css">
+  <link href="css/custom.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.gif" rel="apple-touch-icon"><!--  Please keep this css code to improve the font quality -->
+  <style>
+  * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*width*/
+::-webkit-scrollbar {
+width:10px;
+}
+/*track*/
+::-webkit-scrollbar-track {
+background:rgb(36, 36, 36);
+}
+/*thumb*/
+::-webkit-scrollbar-thumb {
+background:rgb(246, 73, 104);
+}
+</style>
+  <!--  Finsweet Cookie Consent  -->
+  <script async="" src="https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js" fs-cc-mode="opt-in"></script>
+  <!--  Please go to https://cookie-consent.finsweet.com/ for full setup instructions  -->
+  <style>
+body {
+  background: #eee;
+}
+.credits {
+  margin: 20px auto;
+  text-align: center;
+}
+#beforeafter {
+  width: auto;
+  max-width: auto%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+/* Plugin CSS */
+.twentytwenty-horizontal .twentytwenty-handle:before,
+.twentytwenty-horizontal .twentytwenty-handle:after,
+.twentytwenty-vertical .twentytwenty-handle:before,
+.twentytwenty-vertical .twentytwenty-handle:after {
+  content: " ";
+  display: block;
+  background: white;
+  position: absolute;
+  z-index: 30;
+  -webkit-box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+}
+.twentytwenty-horizontal .twentytwenty-handle:before,
+.twentytwenty-horizontal .twentytwenty-handle:after {
+  width: 3px;
+  height: 9999px;
+  left: 50%;
+  margin-left: -1.5px;
+}
+.twentytwenty-vertical .twentytwenty-handle:before,
+.twentytwenty-vertical .twentytwenty-handle:after {
+  width: 9999px;
+  height: 3px;
+  top: 50%;
+  margin-top: -1.5px;
+}
+.twentytwenty-before-label,
+.twentytwenty-after-label,
+.twentytwenty-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.twentytwenty-before-label,
+.twentytwenty-after-label,
+.twentytwenty-overlay {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.twentytwenty-before-label,
+.twentytwenty-after-label {
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition-property: opacity;
+}
+.twentytwenty-before-label:before,
+.twentytwenty-after-label:before {
+  color: white;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+.twentytwenty-before-label:before,
+.twentytwenty-after-label:before {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  line-height: 38px;
+  padding: 0 20px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.twentytwenty-horizontal .twentytwenty-before-label:before,
+.twentytwenty-horizontal .twentytwenty-after-label:before {
+  top: 50%;
+  margin-top: -19px;
+}
+.twentytwenty-vertical .twentytwenty-before-label:before,
+.twentytwenty-vertical .twentytwenty-after-label:before {
+  left: 50%;
+  margin-left: -45px;
+  text-align: center;
+  width: 90px;
+}
+.twentytwenty-left-arrow,
+.twentytwenty-right-arrow,
+.twentytwenty-up-arrow,
+.twentytwenty-down-arrow {
+  width: 0;
+  height: 0;
+  border: 6px inset transparent;
+  position: absolute;
+}
+.twentytwenty-left-arrow,
+.twentytwenty-right-arrow {
+  top: 50%;
+  margin-top: -6px;
+}
+.twentytwenty-up-arrow,
+.twentytwenty-down-arrow {
+  left: 50%;
+  margin-left: -6px;
+}
+.twentytwenty-container {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+.twentytwenty-container img {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  display: block;
+}
+.twentytwenty-container.active .twentytwenty-overlay,
+.twentytwenty-container.active:hover.twentytwenty-overlay {
+  background: rgba(0, 0, 0, 0);
+}
+.twentytwenty-container.active .twentytwenty-overlay .twentytwenty-before-label,
+.twentytwenty-container.active .twentytwenty-overlay .twentytwenty-after-label,
+.twentytwenty-container.active:hover.twentytwenty-overlay .twentytwenty-before-label,
+.twentytwenty-container.active:hover.twentytwenty-overlay .twentytwenty-after-label {
+  opacity: 0;
+}
+.twentytwenty-container * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.twentytwenty-before-label {
+  opacity: 0;
+}
+.twentytwenty-before-label:before {
+  content: "Before";
+}
+.twentytwenty-after-label {
+  opacity: 0;
+}
+.twentytwenty-after-label:before {
+  content: "After";
+}
+.twentytwenty-horizontal .twentytwenty-before-label:before {
+  left: 10px;
+}
+.twentytwenty-horizontal .twentytwenty-after-label:before {
+  right: 10px;
+}
+.twentytwenty-vertical .twentytwenty-before-label:before {
+  top: 10px;
+}
+.twentytwenty-vertical .twentytwenty-after-label:before {
+  bottom: 10px;
+}
+.twentytwenty-overlay {
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  transition-property: background;
+  background: rgba(0, 0, 0, 0);
+  z-index: 25;
+}
+.twentytwenty-overlay:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.twentytwenty-overlay:hover .twentytwenty-after-label {
+  opacity: 1;
+}
+.twentytwenty-overlay:hover .twentytwenty-before-label {
+  opacity: 1;
+}
+.twentytwenty-before {
+  z-index: 20;
+}
+.twentytwenty-after {
+  z-index: 10;
+}
+.twentytwenty-handle {
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -22px;
+  margin-top: -22px;
+  border: 3px solid white;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  border-radius: 1000px;
+  -webkit-box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+  z-index: 40;
+  cursor: pointer;
+}
+.twentytwenty-horizontal .twentytwenty-handle:before {
+  bottom: 50%;
+  margin-bottom: 22px;
+  -webkit-box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+}
+.twentytwenty-horizontal .twentytwenty-handle:after {
+  top: 50%;
+  margin-top: 22px;
+  -webkit-box-shadow: 0 -3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 0 -3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: 0 -3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+}
+.twentytwenty-vertical .twentytwenty-handle:before {
+  left: 50%;
+  margin-left: 22px;
+  -webkit-box-shadow: 3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: 3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+}
+.twentytwenty-vertical .twentytwenty-handle:after {
+  right: 50%;
+  margin-right: 22px;
+  -webkit-box-shadow: -3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: -3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: -3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+}
+.twentytwenty-left-arrow {
+  border-right: 6px solid white;
+  left: 50%;
+  margin-left: -17px;
+}
+.twentytwenty-right-arrow {
+  border-left: 6px solid white;
+  right: 50%;
+  margin-right: -17px;
+}
+.twentytwenty-up-arrow {
+  border-bottom: 6px solid white;
+  top: 50%;
+  margin-top: -17px;
+}
+.twentytwenty-down-arrow {
+  border-top: 6px solid white;
+  bottom: 50%;
+  margin-bottom: -17px;
+}
+</style>
+</head>
+<body class="body">
+  <div class="page-wrapper">
+    <div class="global-styles w-embed">
+      <style>
+/* Snippet gets rid of top margin on first element in any rich text*/
+.w-richtext>:first-child {
+	margin-top: 0;
+}
+/* Snippet gets rid of bottom margin on last element in any rich text*/
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0;
+}
+/* Snippet makes all link elements listed below to inherit color from their parent */
+a, 
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link
+{
+	color: inherit;
+}
+/* Snippet prevents all click and hover interaction with an element */
+.clickable-off {
+	pointer-events: none;
+}
+/* Snippet enables all click and hover interaction with an element */
+.clickable-on{
+  pointer-events: auto;
+}
+/* Snippet enables you to add class of div-square which creates and maintains a 1:1 dimension of a div.*/
+.div-square::after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+/*Hide focus outline for main content element*/
+main:focus-visible {
+	outline: -webkit-focus-ring-color auto 0px;
+}
+/* Make sure containers never lose their center alignment*/
+.container-medium, .container-small, .container-large {
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+/*Reset selects, buttons, and links styles*/
+.w-input, .w-select, a {
+	color: inherit;
+	text-decoration: inherit;
+	font-size: inherit;
+}
+/*Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+/*Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+  ::selection {color: #ffff; background: #f64968;}
+</style>
+    </div>
+    <main class="main-wrapper">
+      <section id="hero" class="section-hero-version1">
+        <header class="container-large">
+          <div class="container-medium hero" data-ix="new-interaction">
+            <h1 class="heading-h1"><span data-w-id="390c65bc-2dcc-9fb9-02f1-335f09bfebf6" class="span-text">I help you achieve your dream body</span> <span data-w-id="6f0a4f1e-6f4a-a564-ab58-935e0b75e4a5" class="span-text">in just 3 weeks.</span></h1>
+            <div class="padding-herotext">
+              <p data-w-id="3af25fe8-4a93-c8e7-05fe-39d6f374907a" class="text-size-large">Transform your body and mind with personalized fitness coaching. Start your journey to a healthier lifestyle today.</p>
+            </div>
+            <div data-w-id="c3cdc9e2-62d4-7539-763e-29f7c0af09e4" class="button-wrapper__component">
+              <div class="padding-horizontal is-buttonwrapper">
+                <a href="#" class="button open-modal w-inline-block">
+                  <p class="text-size-small">Book a call &gt;</p>
+                </a>
+              </div>
+              <div class="padding-horizontal is-buttonwrapper"></div>
+            </div>
+          </div>
+        </header>
+        <div class="home-iconbar_component">
+          <div data-w-id="38f9b700-ca39-27a0-3eb9-5c60c288de23" class="home-iconbar-line"></div>
+          <div class="padding-vertical is-icon">
+            <div data-w-id="d6f28e34-0206-e5ab-3d32-e6070f9e08fc" class="icon-1x1-tiny w-embed"><svg aria-hidden="true" role="img" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <title>Facebook icon</title>
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+              </svg></div>
+          </div>
+          <div class="padding-vertical is-icon">
+            <div data-w-id="f4aaadcf-82dd-9ba2-9e58-a676a511f830" class="icon-1x1-tiny w-embed"><svg aria-hidden="true" role="img" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram icon</title>
+                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path>
+              </svg></div>
+          </div>
+          <div class="padding-vertical is-icon">
+            <div data-w-id="8f1155e6-f76a-03d8-5446-2274ca6634b5" class="icon-1x1-tiny w-embed"><svg aria-hidden="true" role="img" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>LinkedIn icon</title>
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+              </svg></div>
+          </div>
+          <div data-w-id="e5a8909f-9e33-b5f5-4b7f-d35941773299" class="home-iconbar-line"></div>
+        </div>
+        <div data-w-id="c45cfdb2-fbe6-cbde-43ee-40d33a06ab81" class="navbar_component">
+          <div class="container-large">
+            <div data-w-id="a3427964-26c0-e672-0712-3c861cac3da9" class="navbar-wrapper">
+              <a href="#hero" class="navbar-logolink w-inline-block"><img src="images/kochpartners-fitness.svg" loading="lazy" alt="FitBody Logo" class="image"></a>
+              <div data-w-id="3cbfedee-9889-6f18-dce0-c4e59dd3e92f" class="home-nav-linkwrapper">
+                <div class="padding-nav">
+                  <a href="#aboutme" data-w-id="cff47cc9-db0a-a92a-c653-4c697dd5fd65" class="text-style-link">About Me</a>
+                  <div class="navbar-underline"></div>
+                </div>
+                <div class="padding-nav">
+                  <a href="#mywork" data-w-id="4d2633d3-d17f-762f-9647-7a294a3b10e4" class="text-style-link">My Work</a>
+                  <div class="navbar-underline"></div>
+                </div>
+                <div class="padding-nav">
+                  <a href="#kontakt" data-w-id="2fc96656-aa88-75f5-4714-aa49c3af8946" class="text-style-link">Contact</a>
+                  <div class="navbar-underline"></div>
+                </div>
+                <div class="padding-nav">
+                  <a data-w-id="b31a59da-9038-5b64-acf5-47c76927df22" href="#" class="button-second open-modal w-inline-block">
+                    <p class="text-size-small">Schedule a Call</p>
+                  </a>
+                </div>
+              </div>
+              <div class="hamburger-wrapper">
+                <div data-w-id="6101a705-82ee-eedf-3db6-035dc46f1285" class="menu-parent-x">
+                  <div class="menu-bar"></div>
+                  <div class="menu-bar"></div>
+                  <div class="menu-bar"></div>
+                </div>
+                <div data-w-id="d3a2537c-b3cb-2d0c-f984-cc3092e085b1" class="menu-parent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-w-id="08dce30a-71f9-a7b5-2adb-db3baca3ecc4" class="trigger"></div>
+      </section>
+      <section id="aboutme" class="section-aboutme">
+        <div class="blur-circle"></div>
+        <div class="container-large">
+          <div class="padding-vertical">
+            <div data-w-id="2971479a-e2c2-5c28-3896-8ffb906cafd7" class="info-content">
+              <div class="info-content__text-wrapper">
+                <div class="padding-headlines">
+                  <h2 style="opacity:0" class="heading-titletag">ABOUT ME</h2>
+                  <div class="padding-vertical is-heading">
+                    <h3 data-w-id="d4d634f2-2a74-0dce-afe2-646db659b55e" style="opacity:0;-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="heading-large">Hey, I'm Michael</h3>
+                  </div>
+                  <h4 class="heading-subtitle">Fitness Coach since 2019</h4>
+                </div>
+                <p class="text-size-medium">I'm passionate about helping people achieve their fitness goals through personalized training programs and dedicated support. With years of experience in fitness coaching, I've helped numerous clients transform their lives and reach their dream physique.<br><br>My approach combines scientific training methods with practical lifestyle changes to ensure sustainable results. Whether you're looking to lose weight, build muscle, or improve your overall fitness, I'm here to guide you every step of the way.</p>
+                <div class="info-content_cta-wrapper">
+                  <a href="mailto:info@fitbuddy.com?subject=Email%20erfolgreich%20zugestellt!" class="button-third w-inline-block">
+                    <div class="padding-icon"><img src="https://uploads-ssl.webflow.com/611d336bc9a3de2a42936eb2/6130b957ba4a1c0e8ad432a4_email-icon.svg" loading="lazy" alt="" class="button-img"></div>
+                    <p class="text-size-small is-black">info@fitbuddy.com</p>
+                  </a>
+                  <div class="info-content_ine"></div>
+                  <div class="info-content-wrapper">
+                    <div class="padding-horizontal is-buttonwrapper start">
+                      <a href="https://www.linkedin.com/company/kochpartners" class="icon-link w-inline-block">
+                        <div class="icon-1x1-small w-embed"><svg aria-hidden="true" role="img" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>LinkedIn icon</title>
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                          </svg></div>
+                      </a>
+                    </div>
+                    <div class="padding-horizontal is-secbutton">
+                      <a href="https://www.instagram.com/kochpartners/" target="_blank" class="icon-link w-inline-block">
+                        <div class="icon-1x1-small w-embed"><svg aria-hidden="true" role="img" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>Instagram icon</title>
+                            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path>
+                          </svg></div>
+                      </a>
+                    </div>
+                    <div class="padding-horizontal is-secbutton">
+                      <a href="#" class="icon-link w-inline-block">
+                        <div class="icon-1x1-small w-embed"><svg aria-hidden="true" role="img" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                            <title>Facebook icon</title>
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                          </svg></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home-aboutme_image">
+                <div style="-webkit-transform:translate3d(0, 0%, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform-style:preserve-3d" class="home-aboutme-imgcover"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="mywork" class="section-work">
+        <div class="container-large">
+          <div class="padding-vertical">
+            <div data-w-id="15a42a58-4202-a959-3b06-f38cb3980954" class="info-content is-left">
+              <div class="info-content__text-wrapper">
+                <div class="padding-headlines">
+                  <h2 style="opacity:0" class="heading-titletag">WORK</h2>
+                  <div class="padding-vertical is-heading">
+                    <h3 data-w-id="15a42a58-4202-a959-3b06-f38cb398095a"><span data-w-id="fb15694a-6b62-bb3c-c453-041f9b8585ac" style="opacity:0;-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="span-text">I help you achieve your dream body<br></span> <span data-w-id="4cc50df3-3b09-86fb-7025-72b9e441d6f9" style="-webkit-transform:translate3d(153px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(153px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(153px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(153px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="span-text">in just 3 weeks.</span></h3>
+                  </div>
+                </div>
+                <p class="paragraph-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <br><br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <div class="info-content_button-wrapper">
+                  <a data-w-id="0e2013c2-ea25-2e85-8be8-1f35c03d08a3" href="#" class="button-second open-modal w-inline-block">
+                    <p class="text-size-small">Schedule a Call</p>
+                  </a>
+                </div>
+              </div>
+              <div class="home-aboutme_image is-right-padding">
+                <div style="-webkit-transform:translate3d(0, 0%, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform-style:preserve-3d" class="home-aboutme-imgcover"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-vorteile">
+        <div class="container-large">
+          <div class="padding-vertical">
+            <div class="home-vorteile__component">
+              <div class="padding-headlines is-vorteile">
+                <h2 class="heading-medium">Benefits at a <span class="text-span">Glance</span></h2>
+              </div>
+              <div data-w-id="cd650a1d-a194-724a-2bd7-05cc886755c3" class="home-vorteile_boxwrapper">
+                <div class="home-vorteile_box">
+                  <div data-w-id="f2e6f53d-3087-634b-4ed2-e89d139620b1" class="home-vorteile_icon">
+                    <div class="home-vorteile_embed w-embed"><svg width="auto" height="auto" viewbox="0 0 32 32" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="CurrentColor" d="M26.6667 26.6667H21.3333V21.3333H26.6667V26.6667ZM18.6667 13.3333H13.3333V18.6667H18.6667V13.3333ZM26.6667 13.3333H21.3333V18.6667H26.6667V13.3333ZM10.6667 21.3333H5.33333V26.6667H10.6667V21.3333ZM18.6667 21.3333H13.3333V26.6667H18.6667V21.3333ZM10.6667 13.3333H5.33333V18.6667H10.6667V13.3333ZM32 2.66667V32H0V2.66667H4V4C4 5.47067 5.196 6.66667 6.66667 6.66667C8.13733 6.66667 9.33333 5.47067 9.33333 4V2.66667H22.6667V4C22.6667 5.47067 23.8627 6.66667 25.3333 6.66667C26.804 6.66667 28 5.47067 28 4V2.66667H32ZM29.3333 10.6667H2.66667V29.3333H29.3333V10.6667ZM26.6667 1.33333C26.6667 0.597333 26.0707 0 25.3333 0C24.596 0 24 0.597333 24 1.33333V4C24 4.736 24.596 5.33333 25.3333 5.33333C26.0707 5.33333 26.6667 4.736 26.6667 4V1.33333ZM8 4C8 4.736 7.404 5.33333 6.66667 5.33333C5.92933 5.33333 5.33333 4.736 5.33333 4V1.33333C5.33333 0.597333 5.92933 0 6.66667 0C7.404 0 8 0.597333 8 1.33333V4Z"></path>
+                      </svg></div>
+                  </div>
+                  <div class="padding-small">
+                    <h3 class="heading-vorteile">Individual Training Plan</h3>
+                    <p data-w-id="3b54000e-29dd-b9a1-7de0-af1f6be01657" class="text-align-center text-size-tiny">You'll receive a customized training plan tailored to your specific needs, ensuring optimal results</p>
+                  </div>
+                </div>
+                <div class="home-vorteile_box is-second">
+                  <div data-w-id="49a52a2f-21f2-80df-4dc3-af430c3f5f97" class="home-vorteile_icon is-second">
+                    <div class="home-vorteile_embed is-second w-embed"><svg width="auto" height="auto" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="CurrentColor" d="M12.8333 7V16.3333H21V14H15.1667V7H12.8333ZM25.4963 15.9635L27.8273 16.149C27.6733 17.1453 27.4178 18.1043 27.0667 19.019L24.9667 17.9632C25.2 17.3203 25.3785 16.653 25.4963 15.9635ZM22.5237 25.0938L20.8752 23.4103C20.3082 23.8257 19.7015 24.1897 19.061 24.4988L19.8415 26.7143C20.7993 26.2745 21.6977 25.7297 22.5237 25.0938ZM23.954 20.0667C23.5632 20.7037 23.1152 21.2998 22.6135 21.8493L24.2515 23.5212C24.9317 22.7897 25.5337 21.9858 26.047 21.1202L23.954 20.0667ZM0 14C0 21.7315 6.27083 28 14.0047 28C15.2658 28 16.4827 27.818 17.6447 27.5053L16.8688 25.2957C15.9507 25.529 14.994 25.6667 14.0047 25.6667C7.56933 25.6667 2.3345 20.433 2.3345 14C2.3345 7.567 7.56933 2.33333 14.0047 2.33333C16.6122 2.33333 19.0132 3.20133 20.9568 4.65383L18.5652 7.04433L26.7493 8.624L25.1685 0.442167L22.6205 2.989C20.2452 1.12467 17.2597 0 14.0047 0C6.27083 0 0 6.2685 0 14H0ZM27.7352 11.2478H25.3132C25.5033 12.019 25.6177 12.8158 25.6492 13.636L28 13.8238C27.9883 12.943 27.9008 12.0808 27.7352 11.2478Z"></path>
+                      </svg></div>
+                  </div>
+                  <div class="padding-small">
+                    <h3 class="heading-vorteile">24/7 Support</h3>
+                    <p data-w-id="561ad34e-5f80-909a-a60f-3a017286e02a" class="text-align-center text-size-tiny">I provide round-the-clock assistance for your questions, ensuring you always have help when needed.</p>
+                  </div>
+                </div>
+                <div class="home-vorteile_box is-third">
+                  <div data-w-id="1cacfbbf-8274-f304-8436-c36ab213bd33" class="home-vorteile_icon is-third">
+                    <div class="home-vorteile_embed is-third w-embed"><svg width="auto" height="auto" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="CurrentColor" d="M28 3.50008C27.566 8.28925 24.724 12.9396 19.9815 14.5111C20.328 13.8671 20.6768 13.1752 21.0105 12.4309C24.4113 10.6564 25.7203 7.47258 26.2185 5.13808H23.0825C23.1513 4.61308 23.2027 4.06241 23.2447 3.49891H28V3.50008ZM0 3.50008C0.434 8.28925 3.276 12.9396 8.0185 14.5111C7.672 13.8671 7.32317 13.1752 6.9895 12.4309C3.58867 10.6564 2.27967 7.47258 1.7815 5.13808H4.9175C4.84983 4.61425 4.7985 4.06241 4.7565 3.50008H0ZM22.1667 1.16675C22.1667 12.6036 16.2237 16.3952 15.6427 21.0001H12.3702C11.7892 16.3952 5.83333 12.6036 5.83333 1.16675H22.1667ZM13.6442 16.3952C11.4438 12.5919 10.57 7.72458 10.5572 3.50008H8.575C8.81417 8.92275 10.8967 13.2219 13.6442 16.3952ZM15.6777 22.1667H12.334C12.0983 23.5516 11.599 25.2222 9.3345 25.2222V26.8334H18.6678V25.2222C16.3357 25.2222 15.9017 23.5516 15.6777 22.1667Z"></path>
+                      </svg></div>
+                  </div>
+                  <div class="padding-small">
+                    <h3 class="heading-vorteile">Sichtbare Ergebnisse</h3>
+                    <p data-w-id="8beed5c3-415b-16bc-4aa4-47544a48ada9" class="text-align-center text-size-tiny">You'll receive a customized training plan that guarantees optimal training results</p>
+                  </div>
+                </div>
+                <div class="home-vorteile_box is-fourth">
+                  <div data-w-id="0d2d2c7a-669e-5d27-da6c-481cfc441963" class="home-vorteile_icon is-fourth">
+                    <div class="home-vorteile_embed is-fourth w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="auto" viewbox="0 0 24 24" width="auto" fill="CurrentColor">
+                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                        <path d="M15.07 1.01h-6v2h6v-2zm-4 13h2v-6h-2v6zm8.03-6.62l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.14 4.74 14.19 4 12.07 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.11-.74-4.06-1.97-5.61zm-7.03 12.62c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"></path>
+                      </svg></div>
+                  </div>
+                  <div class="padding-small">
+                    <h3 class="heading-vorteile">Expert Guidance</h3>
+                    <p data-w-id="b03b5d19-f3fe-f304-6fcc-a4937365f326" class="text-align-center text-size-tiny">I provide round-the-clock assistance for your questions, ensuring you always have help when needed.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-calltoaction">
+        <div class="container-large">
+          <div class="padding-vertical is-calltoaction">
+            <div class="home-catlayout_component">
+              <div class="home-ctalayout-textwrapper">
+                <div class="padding-bottom">
+                  <h2>Let's Get Started</h2>
+                </div>
+                <p class="paragraph-3">Sign up today for a free consultation and benefit from my expertise in fitness training.</p>
+                <div class="padding-top is-button">
+                  <a href="#" class="button open-modal w-inline-block">
+                    <p class="text-size-small">Schedule a Call &gt;</p>
+                  </a>
+                </div>
+                <div class="padding-vertical is-heading">
+                  <p class="text-align-center text-size-cat">free and non-binding.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="kontakt" class="section-work">
+        <div class="container-large">
+          <div class="padding-form">
+            <div class="home-form w-form">
+              <form id="email-form" name="email-form" data-name="Email Form" method="post" class="home-form-wrapper" data-wf-page-id="682e10400bf2f5af0434907d" data-wf-element-id="f69f42e2-6af5-bf6a-0681-79eea6daa975" onsubmit="return handleFormSubmit(event)">
+                <div class="padding-headlines is-huge">
+                  <h2>Have Questions?<br>Contact me directly.</h2>
+                </div>
+                <div class="home-form-textfieldwrapper">
+                  <input class="home-form-textfield w-input" maxlength="256" name="name" data-name="Name" placeholder="Name" data-w-id="f69f42e2-6af5-bf6a-0681-79eea6daa978" type="text" id="name" required="">
+                  <div class="home-form-textfieldline"></div>
+                </div>
+                <div class="home-form-textfieldwrapper">
+                  <input class="home-form-textfield w-input" maxlength="256" name="Email" data-name="Email" placeholder="Email" type="email" id="Email-2" required="">
+                  <div class="home-form-textfieldline"></div>
+                </div>
+                <div class="home-form-textfieldwrapper">
+                  <input class="home-form-textfield w-input" maxlength="256" name="Nummer" data-name="Nummer" placeholder="Phone Number" type="tel" id="Nummer">
+                  <div class="home-form-textfieldline"></div>
+                </div>
+                <div class="home-form-textfieldwrapper">
+                  <textarea class="home-form-textfield is-nachricht w-input" maxlength="5000" name="Nachricht" data-name="Nachricht" placeholder="Message" id="Nachricht"></textarea>
+                  <div class="home-form-textfieldline"></div>
+                </div>
+                <label class="w-checkbox home-form-checkbox">
+                  <div class="w-checkbox-input w-checkbox-input--inputType-custom check"></div>
+                  <input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" required="" style="opacity:0;position:absolute;z-index:-1">
+                  <span class="checkbox-label w-form-label" for="checkbox">Yes, I have read the <a href="datenschutz.html" class="home-form-link">Privacy Policy</a> and agree that my data will be electronically collected and stored. My data will only be used for processing and responding to my request. By submitting the contact form, I agree to the processing.</span>
+                </label>
+                <input type="submit" data-wait="Sending..." data-w-id="f69f42e2-6af5-bf6a-0681-79eea6daa97c" class="submit-button w-button" value="Send Request">
+              </form>
+              <div class="form-success-message w-form-done" style="display: none;">
+                <div>Thank you! Your request has been sent successfully.</div>
+              </div>
+              <div class="form-error-message w-form-fail" style="display: none;">
+                <div class="text-block-2">Oops! Something went wrong.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blur-circle is-contact"></div>
+      </section>
+      <div class="section-footer">
+        <div class="container is-footer">
+          <div class="glass-container is--footer"></div><img src="images/kochpartners-fitness.svg" loading="lazy" alt="FitBody Logo" class="logo">
+          <div class="content is--footer">
+            <div class="content-item is--footer">
+              <p class="footer-headline">Content</p>
+              <div class="content-part is--footer">
+                <a href="#aboutme" class="footer-nav-link">About Me</a>
+              </div>
+              <div class="content-part is--footer">
+                <a href="#kontakt" class="footer-nav-link">Contact</a>
+              </div>
+            </div>
+          </div>
+          <div class="social-media">
+            <a href="https://www.linkedin.com/company/kochpartners/?viewAsMember=true" target="_blank" class="social-media__link w-inline-block">
+              <div class="icon-1x1-small w-embed"><svg aria-hidden="true" role="img" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>LinkedIn icon</title>
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                </svg></div>
+            </a>
+            <a href="https://www.instagram.com/kochpartners/" target="_blank" class="social-media__link w-inline-block">
+              <div class="icon-1x1-small w-embed"><svg aria-hidden="true" role="img" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Instagram icon</title>
+                  <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path>
+                </svg></div>
+            </a>
+            <a href="https://www.facebook.com/Kochpartners-110615857573752/" target="_blank" class="social-media__link w-inline-block">
+              <div class="icon-1x1-small w-embed"><svg aria-hidden="true" role="img" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <title>Facebook icon</title>
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                </svg></div>
+            </a>
+          </div>
+        </div>
+        <div class="footer-padding"></div>
+      </div>
+    </main>
+    <div class="block-scroll w-embed w-script">
+      <script>
+// when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+ // on .open-modal click
+ document.querySelectorAll('.open-modal').forEach(trigger => {
+  trigger.addEventListener('click', function(){ 
+  // on every click
+    document.querySelectorAll('body').forEach(target => target.classList.add('no-scroll')); 
+  });
+ });
+ // on .close-modal click
+ document.querySelectorAll('.close-modal').forEach(trigger => {
+  trigger.addEventListener('click', function(){ 
+  // on every click
+    document.querySelectorAll('body').forEach(target => target.classList.remove('no-scroll')); 
+  });
+ });
+});
+</script>
+    </div>
+  </div>
+  <div class="second-form">
+    <div class="second-form-container">
+      <div class="icon-wrap">
+        <div data-w-id="4340b4b1-5945-cd65-096f-bdcafa9041e4" class="close-modal w-embed"><svg xmlns="http://www.w3.org/2000/svg" height="auto" viewbox="0 0 24 24" width="auto" fill="CurrentColor">
+            <path d="M0 0h24v24H0V0z" fill="none"></path>
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path>
+          </svg></div>
+      </div>
+      <div class="second-form-block w-form">
+        <form id="email-form-2" name="email-form-2" data-name="Email Form 2" method="get" class="second-form-wrapper" data-wf-page-id="682e10400bf2f5af0434907d" data-wf-element-id="8b32d633-496a-478c-bcf1-b547826b3b71">
+          <div class="heading-wrapper">
+            <h2 class="heading-medium is-centered">Schedule a Free Consultation Now</h2>
+            <div class="padding-vertical is-heading">
+              <h3 class="heading-testimonial">See the results of my clients for yourself.</h3>
+            </div>
+          </div>
+          <div class="home-form-textfieldwrapper"><input class="home-form-textfield-sec w-input" maxlength="256" name="Coaching-Name" data-name="Coaching-Name" placeholder="Enter your full name" type="text" id="Coaching-Name" required="">
+            <div class="home-form-textfieldline"></div>
+          </div>
+          <div class="home-form-textfieldwrapper"><input class="home-form-textfield-sec w-input" maxlength="256" name="Coaching-Email" data-name="Coaching-Email" placeholder="Enter your email address" type="email" id="Coaching-Email" required="">
+            <div class="home-form-textfieldline"></div>
+          </div>
+          <div class="home-form-textfieldwrapper"><input class="home-form-textfield-sec w-input" maxlength="256" name="Coaching-Nummer" data-name="Coaching-Nummer" placeholder="Enter your phone number" type="tel" id="Coaching-Nummer" required="">
+            <div class="home-form-textfieldline"></div>
+          </div><label class="w-checkbox home-form-checkbox is-2">
+            <div class="w-checkbox-input w-checkbox-input--inputType-custom check"></div><input type="checkbox" id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" required="" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="checkbox-2">Yes, I have read the <a href="datenschutz.html" target="_blank" class="home-form-link">Privacy Policy</a> and agree that my data will be electronically collected and stored. My data will only be used for processing and responding to my request. By submitting the contact form, I agree to the processing.</span>
+          </label>
+          <div class="form-button-wrapper"><input type="submit" data-wait="Sending..." data-w-id="8b32d633-496a-478c-bcf1-b547826b3b78" class="submit-button w-button" value="Send"></div>
+        </form>
+        <div class="form-success-message w-form-done">
+          <div>Your request has been sent successfully!</div>
+        </div>
+        <div class="form-error-message w-form-fail">
+          <div class="text-block-3">Oops! Something went wrong, please try again.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-cookie">
+    <div fs-cc="banner" class="fs-cc-banner2_component">
+      <div class="fs-cc-banner2_container">
+        <div class="fs-cc-banner2_text">This website uses cookies and Google Analytics for analysis and statistics. We use cookies for various purposes, including analysis and personalized marketing messages. By continuing to use the website, you agree to their use. Read our <a href="#" class="link-2"><span class="text-span-4">Privacy Policy!</span></a>
+        </div>
+        <div class="fs-cc-banner2_buttons-wrapper">
+          <a fs-cc="deny" href="#" class="fs-cc-banner2_button fs-cc-button-alt w-button">Decline</a>
+          <a fs-cc="allow" href="#" class="fs-cc-banner2_button w-button">Accept</a>
+        </div>
+      </div>
+    </div>
+    <div fs-cc="manager" class="fs-cc-manager2_component">
+      <div fs-cc="open-preferences" role="button" tabindex="0" title="Cookie Preferences" aria-label="Cookie Preferences" class="fs-cc-manager2_button w-embed"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 8L9 8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M16 15L16 15.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M10 17L10 17.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M11 13L11 13.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M6 12L6 12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M12 21C16.9706 21 21 16.9706 21 12C21 11.4402 20.9489 10.8924 20.8511 10.361C20.3413 10.7613 19.6985 11 19 11C18.4536 11 17.9413 10.8539 17.5 10.5987C17.0587 10.8539 16.5464 11 16 11C14.3431 11 13 9.65685 13 8C13 7.60975 13.0745 7.23691 13.2101 6.89492C11.9365 6.54821 11 5.38347 11 4C11 3.66387 11.0553 3.34065 11.1572 3.03894C6.58185 3.46383 3 7.31362 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg></div>
+    </div>
+    <div fs-cc-scroll="disable" fs-cc="preferences" class="fs-cc-prefs2_component">
+      <div class="fs-cc-prefs2_form-wrapper w-form">
+        <form id="cookie-preferences" name="wf-form-Cookie-Preferences" data-name="Cookie Preferences" method="get" class="fs-cc-prefs2_form" data-wf-page-id="682e10400bf2f5af0434907d" data-wf-element-id="4e8732ed-45ad-de63-6961-f8414e736ad4">
+          <div fs-cc="close" class="fs-cc-prefs2_close">
+            <div class="fs-cc-preferences2_close-icon w-embed"><svg fill="currentColor" aria-hidden="true" focusable="false" viewbox="0 0 16 16">
+                <path d="M9.414 8l4.293-4.293-1.414-1.414L8 6.586 3.707 2.293 2.293 3.707 6.586 8l-4.293 4.293 1.414 1.414L8 9.414l4.293 4.293 1.414-1.414L9.414 8z"></path>
+              </svg></div>
+          </div>
+          <div class="fs-cc-prefs2_content">
+            <div class="fs-cc-prefs2_space-small">
+              <div class="fs-cc-prefs2_title">Privacy Preferences</div>
+            </div>
+            <div class="fs-cc-prefs2_option">
+              <div class="fs-cc-prefs2_toggle-wrapper">
+                <div class="fs-cc-prefs2_label">Essential cookies</div>
+                <div class="text-block-46">Required</div>
+              </div>
+            </div>
+            <div class="fs-cc-prefs2_option">
+              <div class="fs-cc-prefs2_toggle-wrapper">
+                <div class="fs-cc-prefs2_label">Marketing cookies</div><label class="w-checkbox fs-cc-prefs2_checkbox-field">
+                  <div class="w-checkbox-input w-checkbox-input--inputType-custom fs-cc-prefs2_checkbox"></div><input type="checkbox" id="marketing-2" name="marketing-2" data-name="Marketing 2" fs-cc-checkbox="marketing" style="opacity:0;position:absolute;z-index:-1"><span for="marketing-2" class="fs-cc-prefs2_checkbox-label w-form-label">Essential</span>
+                </label>
+              </div>
+            </div>
+            <div class="fs-cc-prefs2_option">
+              <div class="fs-cc-prefs2_toggle-wrapper">
+                <div class="fs-cc-prefs2_label">Personalization cookies</div><label class="w-checkbox fs-cc-prefs2_checkbox-field">
+                  <div class="w-checkbox-input w-checkbox-input--inputType-custom fs-cc-prefs2_checkbox"></div><input type="checkbox" id="personalization-2" name="personalization-2" data-name="Personalization 2" fs-cc-checkbox="personalization" style="opacity:0;position:absolute;z-index:-1"><span for="personalization-2" class="fs-cc-prefs2_checkbox-label w-form-label">Essential</span>
+                </label>
+              </div>
+            </div>
+            <div class="fs-cc-prefs2_option">
+              <div class="fs-cc-prefs2_toggle-wrapper">
+                <div class="fs-cc-prefs2_label">Analytics cookies</div><label class="w-checkbox fs-cc-prefs2_checkbox-field">
+                  <div class="w-checkbox-input w-checkbox-input--inputType-custom fs-cc-prefs2_checkbox"></div><input type="checkbox" id="analytics-2" name="analytics-2" data-name="Analytics 2" fs-cc-checkbox="analytics" style="opacity:0;position:absolute;z-index:-1"><span for="analytics-2" class="fs-cc-prefs2_checkbox-label w-form-label">Essential</span>
+                </label>
+              </div>
+            </div>
+            <div class="fs-cc-prefs2_buttons-wrapper">
+              <a fs-cc="deny" href="#" class="fs-cc-prefs2_button fs-cc-button-alt w-button">Reject all cookies</a>
+              <a fs-cc="allow" href="#" class="fs-cc-prefs2_button w-button">Allow all cookies</a>
+              <a fs-cc="submit" href="#" class="fs-cc-prefs2_submit w-button">Save preferences</a>
+            </div>
+          </div>
+        </form>
+        <div class="w-form-done"></div>
+        <div class="w-form-fail"></div>
+        <div fs-cc="close" class="fs-cc-prefs2_overlay"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=682e10400bf2f5af0434900a" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" integrity="sha256-ihAoc6M/JPfrIiIeayPE9xjin4UWjsx2mjW/rtmxLM4=" crossorigin="anonymous"></script>
+  <script>
+!function(t){t.fn.twentytwenty=function(e){var e=t.extend({default_offset_pct:.5,orientation:"horizontal"},e);return this.each(function(){var n=e.default_offset_pct,i=t(this),a=e.orientation,s="vertical"===a?"down":"left",d="vertical"===a?"up":"right";i.wrap("<div class='twentytwenty-wrapper twentytwenty-"+a+"'></div>"),i.append("<div class='twentytwenty-overlay'></div>");var r=i.find("img:first"),w=i.find("img:last");i.append("<div class='twentytwenty-handle'></div>");var c=i.find(".twentytwenty-handle");c.append("<span class='twentytwenty-"+s+"-arrow'></span>"),c.append("<span class='twentytwenty-"+d+"-arrow'></span>"),i.addClass("twentytwenty-container"),r.addClass("twentytwenty-before"),w.addClass("twentytwenty-after");var o=i.find(".twentytwenty-overlay");o.append("<div class='twentytwenty-before-label'></div>"),o.append("<div class='twentytwenty-after-label'></div>");var f=function(t){var e=r.width(),n=r.height();return{w:e+"px",h:n+"px",cw:t*e+"px",ch:t*n+"px"}},l=function(t){"vertical"===a?r.css("clip","rect(0,"+t.w+","+t.ch+",0)"):r.css("clip","rect(0,"+t.cw+","+t.h+",0)"),i.css("height",t.h)},v=function(t){var e=f(t);c.css("vertical"===a?"top":"left","vertical"===a?e.ch:e.cw),l(e)};t(window).on("resize.twentytwenty",function(){v(n)});var p=0,y=0;c.on("movestart",function(t){(t.distX>t.distY&&t.distX<-t.distY||t.distX<t.distY&&t.distX>-t.distY)&&"vertical"!==a?t.preventDefault():(t.distX<t.distY&&t.distX<-t.distY||t.distX>t.distY&&t.distX>-t.distY)&&"vertical"===a&&t.preventDefault(),i.addClass("active"),p=i.offset().left,offsetY=i.offset().top,y=r.width(),imgHeight=r.height()}),c.on("moveend",function(){i.removeClass("active")}),c.on("move",function(t){i.hasClass("active")&&(n="vertical"===a?(t.pageY-offsetY)/imgHeight:(t.pageX-p)/y,0>n&&(n=0),n>1&&(n=1),v(n))}),i.find("img").on("mousedown",function(t){t.preventDefault()}),t(window).trigger("resize.twentytwenty")})}}(jQuery);
+!function(t){"function"==typeof define&&define.amd?define(["jquery"],t):t(jQuery)}(function(t,e){function n(t){function e(){a?(n(),O(e),i=!0,a=!1):i=!1}var n=t,a=!1,i=!1;this.kick=function(){a=!0,i||e()},this.end=function(t){var e=n;t&&(i?(n=a?function(){e(),t()}:t,a=!0):t())}}function a(){return!0}function i(){return!1}function o(t){t.preventDefault()}function r(t){z[t.target.tagName.toLowerCase()]||t.preventDefault()}function u(t){return 1===t.which&&!t.ctrlKey&&!t.altKey}function c(t,e){var n,a;if(t.identifiedTouch)return t.identifiedTouch(e);for(n=-1,a=t.length;++n<a;)if(t[n].identifier===e)return t[n]}function d(t,e){var n=c(t.changedTouches,e.identifier);if(n&&(n.pageX!==e.pageX||n.pageY!==e.pageY))return n}function m(t){var e;u(t)&&(e={target:t.target,startX:t.pageX,startY:t.pageY,timeStamp:t.timeStamp},K(document,Q.move,f,e),K(document,Q.cancel,s,e))}function f(t){var e=t.data;X(t,e,t,v)}function s(){v()}function v(){L(document,Q.move,f),L(document,Q.cancel,s)}function p(t){var e,n;z[t.target.tagName.toLowerCase()]||(e=t.changedTouches[0],n={target:e.target,startX:e.pageX,startY:e.pageY,timeStamp:t.timeStamp,identifier:e.identifier},K(document,B.move+"."+e.identifier,g,n),K(document,B.cancel+"."+e.identifier,h,n))}function g(t){var e=t.data,n=d(t,e);n&&X(t,e,n,l)}function h(t){var e=t.data,n=c(t.changedTouches,e.identifier);n&&l(e.identifier)}function l(t){L(document,"."+t,g),L(document,"."+t,h)}function X(t,e,n,a){var i=n.pageX-e.startX,o=n.pageY-e.startY;C*C>i*i+o*o||y(t,e,n,i,o,a)}function Y(){return this._handled=a,!1}function w(t){t._handled()}function y(t,e,n,a,i,o){{var r,u;e.target}r=t.targetTouches,u=t.timeStamp-e.timeStamp,e.type="movestart",e.distX=a,e.distY=i,e.deltaX=a,e.deltaY=i,e.pageX=n.pageX,e.pageY=n.pageY,e.velocityX=a/u,e.velocityY=i/u,e.targetTouches=r,e.finger=r?r.length:1,e._handled=Y,e._preventTouchmoveDefault=function(){t.preventDefault()},N(e.target,e),o(e.identifier)}function T(t){var e=t.data.timer;t.data.touch=t,t.data.timeStamp=t.timeStamp,e.kick()}function S(t){var e=t.data.event,n=t.data.timer;k(),F(e,n,function(){setTimeout(function(){L(e.target,"click",i)},0)})}function k(){L(document,Q.move,T),L(document,Q.end,S)}function _(t){var e=t.data.event,n=t.data.timer,a=d(t,e);a&&(t.preventDefault(),e.targetTouches=t.targetTouches,t.data.touch=a,t.data.timeStamp=t.timeStamp,n.kick())}function q(t){var e=t.data.event,n=t.data.timer,a=c(t.changedTouches,e.identifier);a&&(A(e),F(e,n))}function A(t){L(document,"."+t.identifier,_),L(document,"."+t.identifier,q)}function D(t,e,n){var a=n-t.timeStamp;t.type="move",t.distX=e.pageX-t.startX,t.distY=e.pageY-t.startY,t.deltaX=e.pageX-t.pageX,t.deltaY=e.pageY-t.pageY,t.velocityX=.3*t.velocityX+.7*t.deltaX/a,t.velocityY=.3*t.velocityY+.7*t.deltaY/a,t.pageX=e.pageX,t.pageY=e.pageY}function F(t,e,n){e.end(function(){return t.type="moveend",N(t.target,t),n&&n()})}function R(){return K(this,"movestart.move",w),!0}function x(){return L(this,"dragstart drag",o),L(this,"mousedown touchstart",r),L(this,"movestart",w),!0}function b(t){"move"!==t.namespace&&"moveend"!==t.namespace&&(K(this,"dragstart."+t.guid+" drag."+t.guid,o,e,t.selector),K(this,"mousedown."+t.guid,r,e,t.selector))}function j(t){"move"!==t.namespace&&"moveend"!==t.namespace&&(L(this,"dragstart."+t.guid+" drag."+t.guid),L(this,"mousedown."+t.guid))}var C=6,K=t.event.add,L=t.event.remove,N=function(e,n,a){t.event.trigger(n,a,e)},O=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(t){return window.setTimeout(function(){t()},25)}}(),z={textarea:!0,input:!0,select:!0,button:!0},Q={move:"mousemove",cancel:"mouseup dragstart",end:"mouseup"},B={move:"touchmove",cancel:"touchend",end:"touchend"};t.event.special.movestart={setup:R,teardown:x,add:b,remove:j,_default:function(t){function a(){D(o,r.touch,r.timeStamp),N(t.target,o)}var o,r;t._handled()&&(o={target:t.target,startX:t.startX,startY:t.startY,pageX:t.pageX,pageY:t.pageY,distX:t.distX,distY:t.distY,deltaX:t.deltaX,deltaY:t.deltaY,velocityX:t.velocityX,velocityY:t.velocityY,timeStamp:t.timeStamp,identifier:t.identifier,targetTouches:t.targetTouches,finger:t.finger},r={event:o,timer:new n(a),touch:e,timeStamp:e},t.identifier===e?(K(t.target,"click",i),K(document,Q.move,T,r),K(document,Q.end,S,r)):(t._preventTouchmoveDefault(),K(document,B.move+"."+t.identifier,_,r),K(document,B.end+"."+t.identifier,q,r)))}},t.event.special.move={setup:function(){K(this,"movestart.move",t.noop)},teardown:function(){L(this,"movestart.move",t.noop)}},t.event.special.moveend={setup:function(){K(this,"movestart.moveend",t.noop)},teardown:function(){L(this,"movestart.moveend",t.noop)}},K(document,"mousedown.move",m),K(document,"touchstart.move",p),"function"==typeof Array.prototype.indexOf&&!function(t){for(var e=["changedTouches","targetTouches"],n=e.length;n--;)-1===t.event.props.indexOf(e[n])&&t.event.props.push(e[n])}(t)});
+$(function(){
+  $(".twentytwenty-container").twentytwenty();
+});
+$(window).load(function() {
+  $("#beforeafter").twentytwenty();
+});
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+  
+  const form = event.target;
+  const formData = new FormData(form);
+  
+  // Show loading state
+  const submitButton = form.querySelector('input[type="submit"]');
+  const originalValue = submitButton.value;
+  submitButton.value = submitButton.getAttribute('data-wait');
+  submitButton.disabled = true;
+  
+  // Here you would typically send the form data to your server
+  // For now, we'll simulate a successful submission
+  setTimeout(() => {
+    // Hide the form
+    form.style.display = 'none';
+    
+    // Show success message
+    const successMessage = form.parentElement.querySelector('.form-success-message');
+    successMessage.style.display = 'block';
+    
+    // Reset the form
+    form.reset();
+    submitButton.value = originalValue;
+    submitButton.disabled = false;
+  }, 1000);
+  
+  return false;
+}
+</script>
+</body>
+</html>
